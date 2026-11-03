@@ -15,6 +15,23 @@ A step is the right size when it has **one new idea** and the user can attempt i
 
 Order steps so each builds on the last and the user gets something visible early (a first working thing, a first sound, a first page). Early wins keep people going.
 
+### Ground first
+
+Before any logic, the user needs to know where the work lives and how to see it. A common mistake is starting with the "interesting" part (an algorithm, a helper function, tests) when the user doesn't yet know which file to create or how to run it.
+
+Example, goal "build a calendar component in React":
+- Bad map: 1) Write `getDaysInMonth()` with tests · 2) …
+  The user is stuck at once: in which folder? named how? where do tests go?
+- Good map: 1) Find where components live in this project and propose a name and place for the calendar · 2) Make `Calendar` render "hello" on a page you can see · 3) Show a fixed grid of 7 columns · 4) Work out which days belong to a month · 5) Fill the grid with real days · 6) Move between months · 7) Edge cases (leap years, weeks starting on Monday)
+
+In step 1 the user doesn't follow a structure you dictate. *Deciding the structure is the challenge.* They look at the project (or, in a blank project, at how similar projects do it) and propose a place and a name with a reason, and that's their proof. If the project already has clear conventions and the user already knows them, merge this into the next step.
+
+Applies outside code too: before "write a 12-bar blues", the user needs an instrument or tool they can play it on and a way to hear it back.
+
+### Don't front-load methods
+
+Practices like test-driven development, a specific architecture or a state library are valuable, but they're ideas of their own. Starting with them stacks two new things on one step. If the user didn't ask for one and doesn't already know it, keep it out of the early steps: offer it later as its own step ("now let's protect this with a test") or as a stretch idea.
+
 Calibrate to what they told you in the opening conversation. A beginner's step might be "run a script and describe what you see". An expert's might be "predict what this does under load". Same goal, different map.
 
 A challenge is an *action*, not a lesson. Compare:
